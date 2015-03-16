@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{4FA0D0FF-F57E-4A75-8351-DB7DF4E0D5B6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>StackOTiles</RootNamespace>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AssemblyName>StackOTiles</AssemblyName>
+    <TargetFrameworkVersion>v4.3</TargetFrameworkVersion>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AudioComponent.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="IMessageDisplay.cs" />
+    <Compile Include="MessageDisplayComponent.cs" />
+    <Compile Include="RankingsStorage.cs" />
+    <Compile Include="ArtificialIntelligence\AIPlayer.cs" />
+    <Compile Include="ArtificialIntelligence\Level.cs" />
+    <Compile Include="ArtificialIntelligence\Levels.cs" />
+    <Compile Include="ArtificialIntelligence\Location.cs" />
+    <Compile Include="ArtificialIntelligence\SimplifiedPlayField.cs" />
+    <Compile Include="ArtificialIntelligence\StageInfo.cs" />
+    <Compile Include="GamePlay\BigGarbageBlock.cs" />
+    <Compile Include="GamePlay\Block.cs" />
+    <Compile Include="GamePlay\BlockListItem.cs" />
+    <Compile Include="GamePlay\BlockState.cs" />
+    <Compile Include="GamePlay\BlockType.cs" />
+    <Compile Include="GamePlay\Chain.cs" />
+    <Compile Include="GamePlay\GarbageBlock.cs" />
+    <Compile Include="GamePlay\GarbageHandler.cs" />
+    <Compile Include="GamePlay\GarbageInfo.cs" />
+    <Compile Include="GamePlay\GarbageType.cs" />
+    <Compile Include="GamePlay\LevelData.cs" />
+    <Compile Include="GamePlay\PlayerInput.cs" />
+    <Compile Include="GamePlay\PlayField.cs" />
+    <Compile Include="GamePlay\PlayFieldState.cs" />
+    <Compile Include="GamePlay\Popper.cs" />
+    <Compile Include="GamePlay\Pos.cs" />
+    <Compile Include="GamePlay\RandomBlocks.cs" />
+    <Compile Include="GamePlay\StressState.cs" />
+    <Compile Include="Graphics\Anim.cs" />
+    <Compile Include="Graphics\AnimFrame.cs" />
+    <Compile Include="Graphics\AnimType.cs" />
+    <Compile Include="Graphics\DrawablePlayField.cs" />
+    <Compile Include="Graphics\EffCombo.cs" />
+    <Compile Include="Graphics\EffPop.cs" />
+    <Compile Include="Graphics\TileSet.cs" />
+    <Compile Include="Networking\AvailableSessionMenuEntry.cs" />
+    <Compile Include="Networking\CreateOrFindSessionScreen.cs" />
+    <Compile Include="Networking\JoinSessionScreen.cs" />
+    <Compile Include="Networking\NetworkBusyScreen.cs" />
+    <Compile Include="Networking\NetworkErrorScreen.cs" />
+    <Compile Include="Networking\NetworkSessionComponent.cs" />
+    <Compile Include="Networking\OperationCompletedEventArgs.cs" />
+    <Compile Include="Networking\ProfileSignInScreen.cs" />
+    <Compile Include="Screens\BackgroundScreen.cs" />
+    <Compile Include="Screens\GameplayScreen.cs" />
+    <Compile Include="Screens\InputQueueItem.cs" />
+    <Compile Include="Screens\InputState.cs" />
+    <Compile Include="Screens\LevelScreen.cs" />
+    <Compile Include="Screens\LobbyScreen.cs" />
+    <Compile Include="Screens\MainMenuScreen.cs" />
+    <Compile Include="Screens\MenuEntry.cs" />
+    <Compile Include="Screens\MenuInput.cs" />
+    <Compile Include="Screens\MenuScreen.cs" />
+    <Compile Include="Screens\MessageBoxScreen.cs" />
+    <Compile Include="Screens\OptionsMenuScreen.cs" />
+    <Compile Include="Screens\PacketTypes.cs" />
+    <Compile Include="Screens\Player.cs" />
+    <Compile Include="Screens\PlayerIndexEventArgs.cs" />
+    <Compile Include="Screens\RankingsScreen.cs" />
+    <Compile Include="Screens\Screen.cs" />
+    <Compile Include="Screens\SplashScreen.cs" />
+    <Compile Include="Screens\StageScreen.cs" />
+    <Compile Include="Screens\VersusAIScreen.cs" />
+    <Compile Include="StackOTilesGame.cs" />
+    <Compile Include="GamePlay\GarbageQueueItem.cs" />
+    <Compile Include="Screens\ScreenManager.cs" />
+    <Compile Include="Resources.Designer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\Strings.xml" />
+    <AndroidResource Include="Resources\drawable\Icon.png" />
+    <AndroidResource Include="Resources\values\Styles.xml" />
+    <AndroidResource Include="Resources\drawable\Splash.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <Import Project="..\packages\MonoGame.Binaries.3.2.0\build\MonoAndroid\MonoGame.Binaries.targets" />
+  <ItemGroup>
+    <Folder Include="ArtificialIntelligence\" />
+    <Folder Include="GamePlay\" />
+    <Folder Include="Graphics\" />
+    <Folder Include="Networking\" />
+    <Folder Include="Screens\" />
+    <Folder Include="Content\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\ingame_font.xnb" />
+    <AndroidAsset Include="Content\blank.xnb" />
+    <AndroidAsset Include="Content\blocks.xnb" />
+    <AndroidAsset Include="Content\cat.xnb" />
+    <AndroidAsset Include="Content\chain.xnb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Content\chat_able.xnb" />
+    <AndroidAsset Include="Content\chat_mute.xnb" />
+    <AndroidAsset Include="Content\chat_ready.xnb" />
+    <AndroidAsset Include="Content\chat_talking.xnb" />
+    <AndroidAsset Include="Content\fanfare1.xnb" />
+    <AndroidAsset Include="Content\fanfare2.xnb" />
+    <AndroidAsset Include="Content\gradient.xnb" />
+    <AndroidAsset Include="Content\logo.xnb" />
+    <AndroidAsset Include="Content\marker.xnb" />
+    <AndroidAsset Include="Content\menu.xnb" />
+    <AndroidAsset Include="Content\normal_music.wma" />
+    <AndroidAsset Include="Content\normal_music.xnb" />
+    <AndroidAsset Include="Content\playfield.xnb" />
+    <AndroidAsset Include="Content\pop1.xnb" />
+    <AndroidAsset Include="Content\pop2.xnb" />
+    <AndroidAsset Include="Content\pop3.xnb" />
+    <AndroidAsset Include="Content\pop4.xnb" />
+    <AndroidAsset Include="Content\stress_music.wma" />
+    <AndroidAsset Include="Content\stress_music.xnb" />
+  </ItemGroup>
+</Project>
